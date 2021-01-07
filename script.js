@@ -54,6 +54,26 @@ function genPass(){
   specialChar = (results[3] === "y")
   numeric = (results[4] === "y");
 
- 
+  var allChar = ""
+  if (lowerCase) {
+    pass += rand_from(lowerChar);
+    allChar += lowerChar
+  }
+  if (upperCase) {
+    pass += rand_from(upperChar)
+    allChar += upperChar;
+  }
+  if (special) {
+    pass += rand_from(specialChar)
+    allChar += specialChar;
+  }
+  if (numeric) {
+    pass += rand_from(numericChar)
+    allChar += numericChar;
+  }
+  while(pass.length < passwordLength){
+    pass += rand_from(allChar)
+  }
+  alert(pass)
 }
 
