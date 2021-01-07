@@ -43,3 +43,17 @@ function rand_from (word){
   return word[n]
 }
 
+//function generates password
+function genPass(){
+  var results = promptMe()
+  var pass = ""
+  
+  passwordLength = parseInt(results[0]);
+  lowerCase = (results[1] === "y");
+  upperCase = (results[2] === "y");
+  specialChar = (results[3] === "y")
+  numeric = (results[4] === "y");
+
+ 
+}
+
