@@ -31,3 +31,15 @@ function promptMe(){
   return [passwordLength, lowerCase, upperCase, special, numeric];
 }
 
+var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var lowerChar = "abcdefghijklmnopqrstuvwxyz"
+// var specialChar = " !&$%#()*+-,.:;<>=?@[]{}^_|~`/\\\"/'" (couldn't get all special characters to work)
+var specialChar = "!&$%#()*+-,.:;<>=?@[]{}^_|~`" 
+var numericChar = "1234567890"
+
+//selects random number from string
+function rand_from (word){
+  var n=Math.floor(Math.random()*word.length)
+  return word[n]
+}
+
