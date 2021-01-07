@@ -15,10 +15,19 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+var passwordLength = 0;
+var lowerCase = true;
+var upperCase = false;
+var special = false;
+var numeric = false;
+
 function promptMe(){
-  var passwordLength = prompt("Please choose a password length between 8 and 128 characters");
-  var lowerCase = prompt("Do you want your password to include lowercase letters?");
-  var upperCase = prompt("Do you want your password to include uppercase letters?");
-  var special = prompt("Do you want your password to include special characters?");
-  var numeric = prompt("Do you want to include numbers in you password?");
+  passwordLength = prompt("Please choose a password length between 8 and 128 characters"); 
+  lowerCase = prompt("Do you want your password to include lowercase letters? (y/n)");
+  upperCase = prompt("Do you want your password to include uppercase letters? (y/n)");
+  special = prompt("Do you want your password to include special characters? (y/n)");
+  numeric = prompt("Do you want to include numbers in you password? (y/n)");
+
+  return [passwordLength, lowerCase, upperCase, special, numeric];
 }
+
