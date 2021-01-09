@@ -51,7 +51,7 @@ function genPass(){
   passwordLength = parseInt(results[0]);
   lowerCase = (results[1] === "y");
   upperCase = (results[2] === "y");
-  specialChar = (results[3] === "y")
+  special = (results[3] === "y")
   numeric = (results[4] === "y");
 
   var allChar = ""
@@ -75,7 +75,4 @@ function genPass(){
     pass += rand_from(allChar)
   }
   alert(pass)
-  alert(pass.length)
-  alert(results[0])
-  alert(allChar)
 }
