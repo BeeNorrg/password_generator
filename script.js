@@ -75,5 +75,7 @@ function genPass(){
     pass += rand_from(allChar)
   }
   alert(pass)
+  alert(pass.Length)
+  alert(passwordLength)
+  alert(allChar)
 }
-
